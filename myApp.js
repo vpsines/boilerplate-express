@@ -4,7 +4,7 @@ let app = express();
 
 app.use(function(req,res,next){
     // log ip
-    let logMessage = req.method +' '+ req.path + ' - '+req.ip;
+    let logMessage = req.method +" "+ req.path + " - " +req.ip;
     console.log(logMessage);
     next();
 });
