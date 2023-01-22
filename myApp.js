@@ -42,7 +42,14 @@ app.route('/name').get(function(req,res){
     var name = query.first + " " + query.last;
     let data = {"name":name};
     res.json(data);
-}).post();
+}).post(function(req,res){
+    let first = req.body.first;
+    let last = req.body.last;
+
+    var data = {"name": first + " "+ last};
+
+    res.json(data);
+});
 
 
 
