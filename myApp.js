@@ -28,6 +28,12 @@ app.get("/now",function(req,res,next){
     res.json(data);
 });
 
+app.get("/:word/echo",function(req,res){
+    let word = req.params.word;
+    let data = {"echo": word};
+    res.json(data);
+});
+
 
 
 
